@@ -1,0 +1,32 @@
+This document describes the policy for management of this repository's
+``webroot``, which contains documents intended for static sharing at
+http://pid.emory.edu/ns/.
+
+Persistent URLs served from this repository should begin with the pattern
+``YYYY/ssss``, where ``YYYY`` is the year in which the name is first
+allocated, and ``ssss`` is a mnemonic name of any length that identifies the
+project. Each document committed in that directory is a stable web resource.
+These stable web resources should never be removed, though their content
+should be updated to reflect any changes, including ultimate deprecation.
+Non-persistent supplemental resources such as incidental image and style
+data may be maintained in directories which do not match the pattern for
+persistent resources.
+
+Each persistent project directory should include an ``index.html``
+describing the project and providing an entry point to the documents we
+publish for it. External links into the project index itself should end with
+the project's mnemonic (directory) name and a ``/``, expecting our web
+server to infer the final ``index.html``. When adding other documents to the
+project root, consider the persistent URL that the document should inhabit
+on the Web, referencing `Cool URIs don't change
+<http://www.w3.org/Provider/Style/URI>`_ for URL allocation principles. For
+example, if you want to serve the URL ``2001/a-space-odyssey/plot`` as HTML
+content, then create a file in this repository named
+``2001/a-space-odyssey/plot.html`` and trust Apache to serve it at the URL
+you've designated.
+
+This policy document draws inspiration from the W3C’s `URI Persistence
+Policy <http://www.w3.org/Consortium/Persistence>`_ and their `policy on
+namespace URIs <http://www.w3.org/2005/07/13-nsuri>`_. Our policy should be
+expected to remain inspired by those and grow more similar to them over
+time.

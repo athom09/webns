@@ -1,0 +1,30 @@
+This svn repository manages an Emory Libraries web namespace. Specifically,
+the documents in the ``webroot`` directory are intended to be mounted
+directly under http://pid.emory.edu/ns/. This enables Emory Libraries to
+participate in the creation of simple, static metadata and ontology
+documentation using simple, stable URIs. Other directories in this
+repository (including the top-level checkout) are for management scripts and
+meta-documentation (like this README).
+
+Maintainers are strongly encouraged to read and understand Tim Berners-Lee's
+classic `Cool URIs don't change <http://www.w3.org/Provider/Style/URI>`_.
+Apache httpd provides several directives that support the principles
+described in that document. `Options +MultiViews
+<http://httpd.apache.org/docs/2.2/mod/core.html#options>`_ enables us to
+publish web links without extensions while still using extensions for the
+related filenames. For instance, with ``MultiViews`` enabled, we can create
+a file named ``2001/a-space-odyssey/plot.html`` and link to the document
+using the url ``2001/a-space-odyssey/plot``. Similarly, `DirectoryIndex
+<http://httpd.apache.org/docs/2.2/mod/mod_dir.html#directoryindex>`_ will
+allow us to create ``2001/a-space-odyssey/index.html`` and serve the content
+at ``2001/a-space-odyssey/``.
+
+Organization of the webroot is documented in ``POLICY``.
+
+Research into Web architecture is particularly illuminating on the nature,
+allocation, and use of URIs as names. For more information about this topic,
+I recommend `Cool URIs Don't Change
+<http://www.w3.org/Provider/Style/URI>`_, `Architecture of the World Wide
+Web, Volume One, section 2: "Identification"
+<http://www.w3.org/TR/webarch/#identification>`_, and more broadly the work
+of the `W3C Technical Architecture Group <http://www.w3.org/2001/tag/>`_.
