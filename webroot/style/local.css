@@ -1,0 +1,19 @@
+code {
+    display:block;
+    white-space:pre;
+    border: 1px solid grey;
+    margin: 5px;
+    background-color: #efefef;
+}
+
+.pid {
+    background-color: #efefef;   
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-bottom: 15px;
+}
