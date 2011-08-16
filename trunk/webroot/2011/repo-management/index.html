@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <title>Repository Management RDF Vocabulary</title>
+    <link href="/~rsutton/ns/style/local.css" rel="stylesheet"  type="text/css" /> 
+  </head>
+<body>
+  <h1>Repository Management RDF Vocabulary</h1>
+
+  <div>
+    <h2>Overview</h2>
+    <p>Repository-Management is an RDF vocbulary intended for use
+      managing content in a repository such
+      as <a href="http://www.fedora-commons.org">Fedora-Commons</a>.</p>
+
+    <p><b>Authoritative Namespace:</b> http://pid.emory.edu/ns/2011/repo-management/#</p>
+
+    <h2>Property List</h2>
+    <ul>
+      <li><a href="#hasPrimaryImage">hasPrimaryImage</a></li>
+      <li><a href="#pageOrder">pageOrder</a></li>
+    </ul>
+  </div>
+
+  <hr/>
+
+    
+  <div>
+    <h2>Properties</h2>
+
+    <dl>
+
+      <dt><a name="hasPrimaryImage">hasPrimaryImage</a></dt>
+      <dd>
+        <p>Relation to another object, which contains the primary
+      image representation for the current object.  For example, the
+      primary image for a book might be the cover.</p>
+
+        <div class="example">
+          Sample Fedora RELS-EXT for a Volume
+          object <span class="pid">vol:1</span> with a page
+          image <span class="pid">page:1</span> specified as the
+          primary image:
+
+          <code>&lt;rdf:RDF
+   xmlns:eul-repomgmt="http://pid.emory.edu/ns/2011/repo-management/#"
+   xmlns:fedora-model="info:fedora/fedora-system:def/model#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"&gt;
+   &lt;rdf:Description rdf:about="info:fedora/vol:1"&gt;
+     &lt;eul-repomgmt:hasPrimaryImage rdf:resource="info:fedora/page:1"/&gt;
+     &lt;fedora-model:hasModel rdf:resource="info:fedora/emory-control:ScannedVolume-1.0"/&gt;
+   &lt;/rdf:Description&gt;
+&lt;/rdf:RDF&gt;</code>
+         </div>
+
+      </dd>
+
+      <dt><a name="pageOrder">pageOrder</a></dt>
+      <dd><p>Literal integer value for the order of a single page
+      object, in the context of the book or volume that it belongs
+      to.</p>
+
+        <div class="example">
+          Sample Fedora RELS-EXT for a Page
+          object <span class="pid">page:5</span> that belongs to a
+          volume <span class="pid">vol:1</span> and has a a page order
+          of 5 with respect to that volume:
+          <code>&lt;rdf:RDF
+   xmlns:eul-repomgmt="http://pid.emory.edu/ns/2011/repo-management/#"
+   xmlns:fedora-model="info:fedora/fedora-system:def/model#"
+   xmlns:fedora-rels-ext="info:fedora/fedora-system:def/relations-external#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   &lt;rdf:Description rdf:about="info:fedora/page:5"&gt;
+     &lt;fedora-rels-ext:isConstituentOf rdf:resource="info:fedora/vol:1"/&gt;
+     &lt;fedora-model:hasModel rdf:resource="info:fedora/emory-control:ScannedPage-1.0"/&gt;
+     &lt;eul-repomgmt:pageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#int"&gt;5&lt;/eul-repomgmt:pageOrderj7gt;
+   &lt;/rdf:Description&gt;
+&lt;/rdf:RDF&gt;</code>
+
+         </div>
+
+
+      </dd>
+
+    </dl>
+  </div>
+
+</body>
+</html>
