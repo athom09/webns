@@ -19,6 +19,7 @@
     <ul>
       <li><a href="#hasPrimaryImage">hasPrimaryImage</a></li>
       <li><a href="#pageOrder">pageOrder</a></li>
+      <li><a href="#SimpleCollection">SimpleCollection</a></li>
     </ul>
   </div>
 
@@ -79,6 +80,23 @@
 
          </div>
 
+
+      </dd>
+
+      <dt><a name="SimpleCollection">SimpleCollection</a></dt>
+      <dd><p>DigitalObject type reference used in object relationships.</p>
+
+        <div class="example">
+          Sample Fedora RELS-EXT using SimpleCollection as a type
+          <code>
+&lt;rdf:RDF xmlns:fedora-model="info:fedora/fedora-system:def/model#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"&gt;
+  &lt;rdf:Description rdf:about="info:fedora/keep-athom09:9fb9g"&gt;
+    &lt;rdf:type rdf:resource="http://pid.emory.edu/ns/2011/repo-management/#SimpleCollection"></rdf:type&gt;
+    &lt;fedora-model:hasModel rdf:resource="info:fedora/emory-control:Collection-1.0"></fedora-model:hasModel&gt;
+  &lt;/rdf:Description>
+&lt;/rdf:RDF></code>
+
+         </div>
 
       </dd>
 
