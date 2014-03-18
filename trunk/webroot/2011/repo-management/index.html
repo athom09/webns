@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
   <head>
     <title>Repository Management RDF Vocabulary</title>
-    <link href="/ns/style/local.css" rel="stylesheet"  type="text/css" /> 
+    <link href="/ns/style/local.css" rel="stylesheet"  type="text/css" />
   </head>
 <body>
   <h1>Repository Management RDF Vocabulary</h1>
@@ -20,12 +20,13 @@
       <li><a href="#hasPrimaryImage">hasPrimaryImage</a></li>
       <li><a href="#pageOrder">pageOrder</a></li>
       <li><a href="#SimpleCollection">SimpleCollection</a></li>
+      <li><a href="#lastFixityCheck">lastFixityCheck</a></li>
     </ul>
   </div>
 
   <hr/>
 
-    
+
   <div>
     <h2>Properties</h2>
 
@@ -74,7 +75,7 @@
    &lt;rdf:Description rdf:about="info:fedora/page:5"&gt;
      &lt;fedora-rels-ext:isConstituentOf rdf:resource="info:fedora/vol:1"/&gt;
      &lt;fedora-model:hasModel rdf:resource="info:fedora/emory-control:ScannedPage-1.0"/&gt;
-     &lt;eul-repomgmt:pageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#int"&gt;5&lt;/eul-repomgmt:pageOrderj7gt;
+     &lt;eul-repomgmt:pageOrder rdf:datatype="http://www.w3.org/2001/XMLSchema#int"&gt;5&lt;/eul-repomgmt:pageOrder&gt;
    &lt;/rdf:Description&gt;
 &lt;/rdf:RDF&gt;</code>
 
@@ -90,11 +91,31 @@
           Sample Fedora RELS-EXT using SimpleCollection as a type
           <code>
 &lt;rdf:RDF xmlns:fedora-model="info:fedora/fedora-system:def/model#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"&gt;
-  &lt;rdf:Description rdf:about="info:fedora/keep-athom09:9fb9g"&gt;
-    &lt;rdf:type rdf:resource="http://pid.emory.edu/ns/2011/repo-management/#SimpleCollection"></rdf:type&gt;
-    &lt;fedora-model:hasModel rdf:resource="info:fedora/emory-control:Collection-1.0"></fedora-model:hasModel&gt;
+  &lt;rdf:Description rdf:about="info:fedora/coll:1"&gt;
+    &lt;rdf:type rdf:resource="http://pid.emory.edu/ns/2011/repo-management/#SimpleCollection"&gt;&lt;/rdf:type&gt;
+    &lt;fedora-model:hasModel rdf:resource="info:fedora/emory-control:Collection-1.0"&gt;&lt;/fedora-model:hasModel&gt;
   &lt;/rdf:Description>
 &lt;/rdf:RDF></code>
+
+         </div>
+
+      </dd>
+
+      <dt><a name="lastFixityCheck">lastFixityCheck</a></dt>
+      <dd><p>Literal date value recording the most recent time that a fixity check was completed
+        for the datastreams on the given object.</p>
+
+        <div class="example">
+          Sample Fedora RELS-EXT with lastFixityCheck
+          <code>&lt;rdf:RDF
+   xmlns:eul-repomgmt="http://pid.emory.edu/ns/2011/repo-management/#"
+   xmlns:fedora-model="info:fedora/fedora-system:def/model#"
+   xmlns:fedora-rels-ext="info:fedora/fedora-system:def/relations-external#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   &lt;rdf:Description rdf:about="info:fedora/object:100"&gt;
+     &lt;eul-repomgmt:lastFixityCheck rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"&gt;2012-05-30T09:00:00&lt;/eul-repomgmt:lastFixityCheck&gt;
+   &lt;/rdf:Description&gt;
+&lt;/rdf:RDF&gt;</code>
 
          </div>
 
