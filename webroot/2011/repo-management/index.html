@@ -21,6 +21,7 @@
       <li><a href="#pageOrder">pageOrder</a></li>
       <li><a href="#SimpleCollection">SimpleCollection</a></li>
       <li><a href="#lastFixityCheck">lastFixityCheck</a></li>
+      <li><a href="#startPage">startPage</a></li>
     </ul>
   </div>
 
@@ -114,6 +115,26 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    &lt;rdf:Description rdf:about="info:fedora/object:100"&gt;
      &lt;eul-repomgmt:lastFixityCheck rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"&gt;2012-05-30T09:00:00&lt;/eul-repomgmt:lastFixityCheck&gt;
+   &lt;/rdf:Description&gt;
+&lt;/rdf:RDF&gt;</code>
+
+         </div>
+
+      </dd>
+
+      <dt><a name="startPage">startPage</a></dt>
+      <dd><p>Starting page for any multi-page content; for example, for a PDF with leading pages
+          the startPage would be the first non-blank page in the PDF.</p>
+
+        <div class="example">
+          Sample Fedora RELS-EXT with lastFixityCheck
+          <code>&lt;rdf:RDF
+   xmlns:eul-repomgmt="http://pid.emory.edu/ns/2011/repo-management/#"
+   xmlns:fedora-model="info:fedora/fedora-system:def/model#"
+   xmlns:fedora-rels-ext="info:fedora/fedora-system:def/relations-external#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   &lt;rdf:Description rdf:about="info:fedora/object:100"&gt;
+     &lt;eul-repomgmt:startPage rdf:datatype="http://www.w3.org/2001/XMLSchema#int""&gt;4&lt;/eul-repomgmt:startPage&gt;
    &lt;/rdf:Description&gt;
 &lt;/rdf:RDF&gt;</code>
 
